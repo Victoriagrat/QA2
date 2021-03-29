@@ -1,4 +1,4 @@
-unction pendulum(values) {
+function pendulum(values) {
     let min = Math.min(...values); //нашли минимальний элемент массива
     values.splice(values.indexOf(min), 1); //удалили минимальный элемент из входящего массива
     values.sort((a,b) => a - b); //отсортировали массив без минимального элемента по возрастанию
