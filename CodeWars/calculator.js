@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Calculator{
     constructor(x, y){
     this.x = x;
@@ -30,3 +31,4 @@ class Calculator{
      console.log(myCalculator.multiply);
     
     console.log(myCalculator.divide);
+

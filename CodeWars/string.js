@@ -1,4 +1,5 @@
 class Strings{
+<<<<<<< HEAD
   constructor(a){
     this.x = a;
    }
