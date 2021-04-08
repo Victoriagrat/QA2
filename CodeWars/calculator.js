@@ -1,57 +1,34 @@
-class Numbers{
-    constructor(a){
-      this.x = a;
+<<<<<<< HEAD
+class Calculator{
+    constructor(x, y){
+    this.x = x;
+    this.y = y;
     }
-    set value(a){
-      this.x = a;
+    get plus(){
+        return this.x + this.y;
     }
-    get abs(){
-      return Math.abs(this.x);
+      get minus(){
+       return this.x - this.y;
+        
+     }
+     get multiply(){
+        return this.x * this.y;
+       }
+      get divide(){
+      return this.x / this.y;
+      }
     }
-    get reverse(){
-      return -this.x;
-    }
-    get round(){
-      return Math.round(this.x);
-    }
-    get floor(){
-      return Math.floor(this.x);
-    }
-    get ceil(){
-      return Math.ceil(this.x);
-    }
-    pow(a){
-      return Math.pow(this.x, a);
-    }
-    toFixed(a){
-      return +this.x.toFixed(a);
-    }
-    toNumber(){
-      this.x = Number(this.x);
-    }
-    get nan(){
-      return isNan(this.x);
-    }
-    get sqrt(){
-      return Math.sqrt(this.x);
-    }
-  }
-  let num = new Numbers('12345.4563456');
-  console.log(num);
-  num.toNumber();
-  console.log(num.x);
-  console.log(num.reverse);
-  console.log(num.round);
-  console.log(num.floor);
-  console.log(num.ceil);
-  console.log(num.pow(2));
-  console.log(num.toFixed(2));
-  num.value = 5;
-  console.log(num.x);
-  let arr = [233.34, 332.44, '4325.5', '-43545'];
-  let mynum = new Numbers();
-  for(el of arr){
-    mynum.value = el;
-    mynum.toNumber();
-    console.log(mynum.floor);
-  
+    
+    
+    let myCalculator = new Calculator(5,5);
+    
+    console.log(myCalculator);
+    
+     console.log(myCalculator.plus);
+    
+    console.log(myCalculator.minus);
+    
+     console.log(myCalculator.multiply);
+    
+    console.log(myCalculator.divide);
+
