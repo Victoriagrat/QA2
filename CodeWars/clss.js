@@ -53,4 +53,4 @@ class Numbers{
   for(el of arr){
     mynum.value = el;
     mynum.toNumber();
-    console.log(mynum.floor);
+    console.log(mynum.floor)
