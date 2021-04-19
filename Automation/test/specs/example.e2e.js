@@ -1,5 +1,4 @@
 const expect = require("chai").expect;
-​
 describe("Main page test suite", () => {
   it("Validate the title of the main page", () => {
     browser.url("https://demoqa.com/");
@@ -32,5 +31,40 @@ describe("Main page test suite", () => {
     element.click();
     const actualURL = browser.getUrl();
     expect(actualURL).to.equal('https://demoqa.com/elements');
+  });
+  it('Click on Forms tile and validate the target URL', () => {
+    browser.url('https://demoqa.com/');
+    const element = $$('.category-cards > div')[1];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/forms');
+  });
+  it('Click on AlertsWindows tile and validate the target URL', () => {
+    browser.url('https://demoqa.com/');
+    const element = $$('.category-cards > div')[2];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/alertsWindows');
+  });
+  it('Click on Widgets tile and validate the target URL', () => {
+    browser.url('https://demoqa.com/');
+    const element = $$('.category-cards > div')[3];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/widgets');
+  });
+  it('Click on Interaction tile and validate the target URL', () => {
+    browser.url('https://demoqa.com/');
+    const element = $$('.category-cards > div')[4];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/interaction');
+  });
+  it('Click on Books tile and validate the target URL', () => {
+    browser.url('https://demoqa.com/');
+    const element = $$('.category-cards > div')[5];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/books');
   });
 });
