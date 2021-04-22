@@ -12,4 +12,7 @@ describe('Validate Elements section', () => {
         textBox.click();
         expect(browser.getUrl()).to.equal(URLs.textBox);
     });
+    it('validate thr labels in TextBox', () => {
+        
+    });
 });
