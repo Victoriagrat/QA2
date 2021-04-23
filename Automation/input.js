@@ -1,7 +1,6 @@
 export const inputTextBox = {
-    fullName;
-    email
-    currentAddress:
-    permanentAdress:
-    
+    fullName : "IT START",
+    email: "info@itstart.us",
+    currentAddress: "USA Florida",
+    permanentAddress: "USA Florida, Jax"
 }
