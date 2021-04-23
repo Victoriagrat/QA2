@@ -8,11 +8,29 @@ class otherTextBox {
   get userNumber() {
     return $("#userNumber-label").getText();
   }
-  get labelPermAddress() {
-    return $("#permanentAddress-label").getText();
+  get dateOfBirth() {
+    return $("#dateOfBirth-label").getText();
   }
-  get inputFullName() {
-    return $("#userName");
+  get subjects() {
+    return $$("#subjects-label")[0].getText();
+  }
+  get Subjects() {
+    return $$("#subjects-label")[1].getText();
+  }
+  get pictures() {
+    return $$("#subjects-label")[2].getText();
+  }
+  get currAddress() {
+    return $("#currentAddress-label").getText();
+  }
+  get  stateCitylabel() {
+    return $("#stateCity-label").getText();    
+  }
+  get  genter() {
+    return $$("#genterWrapper > div.col-md-3.col-sm-12")[0].getText();  
+  }
+  get practiceHead() {
+    return $$("#app > div > div > div.pattern-backgound.playgound-header > div")[0].getText();
   }
   get inputFullNamePlaceholder() {
     return this.inputFullName.getAttribute("placeholder");

@@ -1,18 +1,22 @@
 const expect = require("chai").expect;
 import {babels} from "../../anotherexpected";
 import otherTextBox from "../../newtextbox";
-describe("test", () => {
+describe("testPracticeForm", () => {
   
-  it("new twst", () => {
+  it("testLabels", () => {
     browser.url("https://demoqa.com/automation-practice-form");
      expect(otherTextBox.babelUserName).to.equal(babels.textBoxBabels.fullName);
      expect(otherTextBox.labelEmail).to.equal(babels.textBoxBabels.email);
-    //  expect(otherTextBox.labelCurrentAddress).to.equal(babels.textBoxBabels.currentAddress);$$("#genterWrapper > div.col-md-3.col-sm-12")
-    //  [div.col-md-3.col-sm-12]
      expect(otherTextBox.userNumber).to.equal(babels.textBoxBabels.userNumber);
-    //  expect(newerTextBox.labelCurrentAddress).to.equal(labels.textBoxLabels.currentAddress);
-    //  expect(newerTextBox.labelPermAddress).to.equal(labels.textBoxLabels.permAddress);
+     expect(otherTextBox.dateOfBirth).to.equal(babels.textBoxBabels.dateOfBirth);
+     expect(otherTextBox.subjects).to.equal(babels.textBoxBabels.subjects);
+     expect(otherTextBox.Subjects).to.equal(babels.textBoxBabels.Subjects);
+     expect(otherTextBox.pictures).to.equal(babels.textBoxBabels.pictures);
+     expect(otherTextBox.currAddress).to.equal(babels.textBoxBabels.currAddress);
+     expect(otherTextBox.stateCitylabel).to.equal(babels.textBoxBabels.stateCitylabel);
+     expect(otherTextBox.genter).to.equal(babels.textBoxBabels.genter);
+     expect(otherTextBox.practiceHead).to.equal(babels.textBoxBabels.practiceHead);
+     
   });
-    // const actualTitle = browser.getTitle();
-    // expect(actualTitle).to.equal(labels.title);
+   
   });

@@ -21,8 +21,16 @@ export const babels = {
     textBoxBabels: {
         fullName: "Name",
         email: "Email",
-        currentAddress: "Gender",
-        userNumber: "Mobile(10 Digits)"
+        userNumber: "Mobile(10 Digits)",
+        dateOfBirth: "Date of Birth",
+        subjects: "Subjects",
+        Subjects: "Hobbies",
+        pictures: "Picture",
+        currAddress: 'Current Address',
+        stateCitylabel: 'State and City',
+        genter: "Gender",
+        practiceHead: "Practice Form"
+
     },
     textBoxPlaceholders: {
         fullName: "Full Name",
