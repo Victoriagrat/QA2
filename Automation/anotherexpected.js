@@ -31,10 +31,10 @@ export const babels = {
         genter: "Gender",
         practiceHead: "Practice Form"
 
-    },
-    textBoxPlaceholders: {
-        fullName: "Full Name",
-        email: "name@example.com",
-        currentAddress: "Current Address"
+    // },
+    // textBoxPlaceholders: {
+    //     fullName: "Full Name",
+    //     email: "name@example.com",
+    //     currentAddress: "Current Address"
     }
 }

@@ -5,6 +5,7 @@ describe("testPracticeForm", () => {
   
   it("testLabels", () => {
     browser.url("https://demoqa.com/automation-practice-form");
+     expect(otherTextBox.practiceHead).to.equal(babels.textBoxBabels.practiceHead); 
      expect(otherTextBox.babelUserName).to.equal(babels.textBoxBabels.fullName);
      expect(otherTextBox.labelEmail).to.equal(babels.textBoxBabels.email);
      expect(otherTextBox.userNumber).to.equal(babels.textBoxBabels.userNumber);
@@ -15,7 +16,7 @@ describe("testPracticeForm", () => {
      expect(otherTextBox.currAddress).to.equal(babels.textBoxBabels.currAddress);
      expect(otherTextBox.stateCitylabel).to.equal(babels.textBoxBabels.stateCitylabel);
      expect(otherTextBox.genter).to.equal(babels.textBoxBabels.genter);
-     expect(otherTextBox.practiceHead).to.equal(babels.textBoxBabels.practiceHead);
+     
      
   });
    
