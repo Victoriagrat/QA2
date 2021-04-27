@@ -1,4 +1,4 @@
-// export const URLs = {
+export const URLs = {
 //     elements: "https://demoqa.com/elements",
 //     forms : "https://demoqa.com/forms",
 //     alertsWindows : "https://demoqa.com/alertsWindows",
@@ -6,7 +6,8 @@
 //     interaction: "https://demoqa.com/interaction",
 //     books: "https://demoqa.com/books",
 //     textBox: "https://demoqa.com/text-box"
-// }
+        practiceForm: "https://demoqa.com/automation-practice-form"
+}
 
 export const babels = {
     title: "ToolsQA",
