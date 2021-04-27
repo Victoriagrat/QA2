@@ -1,10 +1,10 @@
 const expect = require("chai").expect;
-import {babels} from "../../anotherexpected";
+import {URLs,babels} from "../../anotherexpected";
 import otherTextBox from "../../newtextbox";
 describe("testPracticeForm", () => {
   
   it("testLabels", () => {
-    browser.url("https://demoqa.com/automation-practice-form");
+    browser.url(URLs.practiceForm);
      expect(otherTextBox.practiceHead).to.equal(babels.textBoxBabels.practiceHead); 
      expect(otherTextBox.babelUserName).to.equal(babels.textBoxBabels.fullName);
      expect(otherTextBox.labelEmail).to.equal(babels.textBoxBabels.email);
