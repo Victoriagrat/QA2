@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
-import {URLs,babels} from "../../anotherexpected";
-import otherTextBox from "../../newtextbox";
+import {URLs,babels} from "../../pajeobjects/anotherexpected";
+import otherTextBox from "../../pajeobjects/newtextbox";
 describe("testPracticeForm", () => {
    it("testLabels of gender and clickBox", () => {
  browser.url(URLs.practiceForm);
