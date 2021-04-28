@@ -32,15 +32,6 @@ class otherTextBox {
   get practiceHead() {
     return $$("#app > div > div > div.pattern-backgound.playgound-header > div")[0].getText();
   }
-  get checkbox(){
-    return $("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(1)");
-  }
-  get checkboxFemale(){
-    return $("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(2)");
-  }
-  get checkboxOther(){
-  return $("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(3)");
-  }
   get checkSports(){
     return $('#hobbies-checkbox-1 + label');
   }
@@ -53,6 +44,21 @@ class otherTextBox {
   get allChecked(){
     return $$(':checked + label').map(el => el.getText());
   }
+  get checkBoxMale(){
+   return $("label[for = 'gender-radio-1']");
+   }
+  get checkBoxFemale(){
+   return $("label[for = 'gender-radio-2']");
+  }
+  get checkBoxOther(){
+  return $("label[for = 'gender-radio-3']");
+  }
+  get genderButtons(){
+    return [this.checkBoxMale, this.checkBoxFemale, this.checkBoxOther];
+}
+get textSuccess(){
+  return (this.genderButtons).map(el => el.getText());
+ }
   // get inputEmail() {
   //   return $("#userEmail");
   // }
