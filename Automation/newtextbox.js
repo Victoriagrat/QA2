@@ -32,9 +32,15 @@ class otherTextBox {
   get practiceHead() {
     return $$("#app > div > div > div.pattern-backgound.playgound-header > div")[0].getText();
   }
-  // get inputFullNamePlaceholder() {
-  //   return this.inputFullName.getAttribute("placeholder");
-  // }
+  get checkbox(){
+    return $("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(1)");
+  }
+  get checkboxFemale(){
+    return $("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(2)");
+  }
+  get checkboxOther(){
+  return $("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(3)");
+  }
   // get inputEmail() {
   //   return $("#userEmail");
   // }
