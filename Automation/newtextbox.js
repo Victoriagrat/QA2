@@ -41,6 +41,18 @@ class otherTextBox {
   get checkboxOther(){
   return $("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(3)");
   }
+  get checkSports(){
+    return $('#hobbies-checkbox-1 + label');
+  }
+  get checkReading(){
+    return $('#hobbies-checkbox-2 + label');
+  }
+  get checkMusic(){
+    return $('#hobbies-checkbox-3 + label');
+  }
+  get allChecked(){
+    return $$(':checked + label').map(el => el.getText());
+  }
   // get inputEmail() {
   //   return $("#userEmail");
   // }
