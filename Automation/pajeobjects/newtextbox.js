@@ -42,7 +42,7 @@ class otherTextBox {
     return $('#hobbies-checkbox-3 + label');
   }
   get allChecked(){
-    return $$(':checked + label').map(el => el.getText());
+    return $$(':checked + label').map(el => el.getText()).toString();
   }
   get checkBoxMale(){
    return $("label[for = 'gender-radio-1']");
@@ -58,7 +58,13 @@ class otherTextBox {
 }
 get textSuccess(){
   return (this.genderButtons).map(el => el.getText());
- }
+}
+get allChecked1(){
+  return $$(':checked + label').map(el => el.getText());
+}
+//  get ueu(){
+//  return (this.textSuccess).split('').join('');
+// }
   // get inputEmail() {
   //   return $("#userEmail");
   // }
