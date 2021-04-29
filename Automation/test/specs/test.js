@@ -6,8 +6,9 @@ describe("testPracticeForm", () => {
  browser.url(URLs.practiceForm);
  const selection = Math.round(Math.random()*2);
         otherTextBox.genderButtons[selection].click();
-         expect(otherTextBox.textSuccess).to.eql(['Male', 'Female', 'Other']);;
-    });
+         expect(otherTextBox.textSuccess).to.eql(['Male', 'Female', 'Other']);
+         expect(otherTextBox.allChecked).to.eql(otherTextBox.genderButtons[selection].getText());
+       });
  it('Practice Form labels name check', () => {
      expect(otherTextBox.practiceHead).to.equal(babels.textBoxBabels.practiceHead); 
      expect(otherTextBox.babelUserName).to.equal(babels.textBoxBabels.fullName);
@@ -26,6 +27,6 @@ describe("testPracticeForm", () => {
   otherTextBox.checkMusic.click();
   otherTextBox.checkReading.click();
   otherTextBox.checkSports.click();
-  expect(otherTextBox.allChecked).to.eql(['Sports', 'Reading', 'Music']);
+  expect(otherTextBox.allChecked1).to.eql(['Sports', 'Reading', 'Music']);
 });
 });
