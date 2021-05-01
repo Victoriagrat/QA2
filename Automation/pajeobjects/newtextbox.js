@@ -62,51 +62,48 @@ get textSuccess(){
 get allChecked1(){
   return $$(':checked + label').map(el => el.getText());
 }
-//  get ueu(){
-//  return (this.textSuccess).split('').join('');
-// }
-  // get inputEmail() {
-  //   return $("#userEmail");
-  // }
-  // get inputEmailPlaceholder() {
-  //   return this.inputEmail.getAttribute("placeholder");
-  // }
-  // get inputEmail() {
-  //   return $("#userEmail");
-  // }
-  // get inputEmailPlaceholder() {
-  //   return this.inputEmail.getAttribute("placeholder");
-  // }
-  // get inputCurrentAddress() {
-  //   return $("textarea#currentAddress");
-  // }
-  // get inputCurrentAddressPlaceholder() {
-  //   return this.inputCurrentAddress.getAttribute("placeholder");
-  // }
-  // get inputPermanentAddress() {
-  //   return $("textarea#permanentAddress");
-  // }
-  // fillForm(obj) {
-  //   this.inputFullName.setValue(obj.fullName);
-  //   this.inputEmail.setValue(obj.email);
-  //   this.inputCurrentAddress.setValue(obj.currentAddress);
-  //   this.inputPermanentAddress.setValue(obj.permanentAddress);
-  // }
-  // get resultuserName() {
-  //   return $("#name");
-  // }
-  // get resultEmail() {
-  //   return $("#email");
-  // }
-  // get resultCurrentAddress() {
-  //   return $("p#currentAddress");
-  // }
-  // get resultPermanentAddress() {
-  //   return $("p#permanentAddress");
-  // }
-  // get btnSubmit() {
-  //   return $("#submit");
-  // }
+
+get inputFirstlName() {
+  return $("#firstName");
+}
+get inputLastlName() {
+  return $("#lastName");
+}
+
+get inputFirstNamePlaceholder() {
+  return this.inputFirstlName.getAttribute("placeholder");
+}
+get inputLastNamePlaceholder() {
+  return this.inputLastlName.getAttribute("placeholder");
+}
+get inputEmails() {
+  return $("#userEmail");
+}
+get inputEmailsPlaceholder() {
+  return this.inputEmails.getAttribute("placeholder");
+}
+get inputUserNumber() {
+  return $("#userNumber");
+}
+get inputUserNumberPlaceholder() {
+  return this.inputUserNumber.getAttribute("placeholder");
+}
+get inputCurrentAddress1() {
+  return $("#currentAddress");
+}
+get inputCurrentAddressPlaceholder1() {
+  return this.inputCurrentAddress1.getAttribute("placeholder");
+}
+get inputPermanentAddress() {
+  return $("textarea#permanentAddress");
+}
+fillForm(obj) {
+  this.inputFirstlName.setValue(obj.firstName);
+  this.inputLastlName.setValue(obj.lastName);
+  this.inputEmails.setValue(obj.email);
+  this.inputUserNumber.setValue(obj.userNumber);
+  this.inputCurrentAddress1.setValue(obj.currentAddress);
+}
 }
 
 export default new otherTextBox();
