@@ -31,11 +31,18 @@ export const babels = {
         stateCitylabel: 'State and City',
         genter: "Gender",
         practiceHead: "Practice Form"
+        
+        
 
-    // },
-    // textBoxPlaceholders: {
-    //     fullName: "Full Name",
-    //     email: "name@example.com",
-    //     currentAddress: "Current Address"
+    },
+    textBoxPlaceholders: {
+      fullName: "Full Name",
+      email: "name@example.com",
+      currentAddress: "Current Address",
+      firstName: "First Name",
+      lastName: "Last Name",
+      userNumber: "Mobile Number",
+      curentAddress: "Current Address"
+      
     }
 }

@@ -1,6 +1,7 @@
 const expect = require("chai").expect;
 import {URLs,babels} from "../../pajeobjects/anotherexpected";
 import otherTextBox from "../../pajeobjects/newtextbox";
+import {inputTextBoxPracticeForm} from "../../pajeobjects/input";
 describe("testPracticeForm", () => {
    it("testLabels of gender and clickBox", () => {
  browser.url(URLs.practiceForm);
@@ -28,5 +29,17 @@ describe("testPracticeForm", () => {
   otherTextBox.checkReading.click();
   otherTextBox.checkSports.click();
   expect(otherTextBox.allChecked1).to.eql(['Sports', 'Reading', 'Music']);
+});
+  it('Validate placeholder texts of inputs', () => {
+
+  expect(otherTextBox.inputFirstNamePlaceholder).to.equal(babels.textBoxPlaceholders.firstName);
+  expect(otherTextBox.inputLastNamePlaceholder).to.equal(babels.textBoxPlaceholders.lastName);
+  expect(otherTextBox.inputEmailsPlaceholder).to.equal(babels.textBoxPlaceholders.email);
+  expect(otherTextBox.inputUserNumberPlaceholder).to.equal(babels.textBoxPlaceholders.userNumber);
+  expect(otherTextBox.inputCurrentAddressPlaceholder1).to.equal(babels.textBoxPlaceholders.curentAddress);
+});
+it('Fill the form', () => {
+ otherTextBox.fillForm(inputTextBoxPracticeForm);
+
 });
 });
