@@ -97,13 +97,26 @@ get inputCurrentAddressPlaceholder1() {
 get inputPermanentAddress() {
   return $("textarea#permanentAddress");
 }
-fillForm(obj) {
-  this.inputFirstlName.setValue(obj.firstName);
-  this.inputLastlName.setValue(obj.lastName);
-  this.inputEmails.setValue(obj.email);
-  this.inputUserNumber.setValue(obj.userNumber);
-  this.inputCurrentAddress1.setValue(obj.currentAddress);
+// fillForm(obj) {                                                    //this is hand write data
+//   this.inputFirstlName.setValue(obj.firstName);
+//   this.inputLastlName.setValue(obj.lastName);
+//   this.inputEmails.setValue(obj.email);
+//   this.inputUserNumber.setValue(obj.userNumber);
+//   this.inputCurrentAddress1.setValue(obj.currentAddress);
+//}
+get inputdateOfBirth(){
+  return $('#dateOfBirthInput');
 }
+ fillForm(inputTextBoxPracticeForm2) {
+  this.inputFirstlName.setValue(inputTextBoxPracticeForm2.firstName);
+  this.inputLastlName.setValue(inputTextBoxPracticeForm2.lastName);
+  this.inputEmails.setValue(inputTextBoxPracticeForm2.email);
+  this.inputUserNumber.setValue(inputTextBoxPracticeForm2.userNumber);
+  this.inputdateOfBirth.setValue(inputTextBoxPracticeForm2.dateOfBirth);
+  this.inputCurrentAddress1.setValue(inputTextBoxPracticeForm2.currentAddress);
+
+  }
 }
+
 
 export default new otherTextBox();
