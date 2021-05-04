@@ -9,10 +9,4 @@ describe('Validate Radio Button page', () => {
         RadioButton.radioButtons[selection].click();
         expect(RadioButton.textSuccess).to.equal(RadioButton.radioButtons[selection].getText());
     });
-    // it('', () => {
-        
-    // });
-    // it('', () => {
-        
-    // });
 });
