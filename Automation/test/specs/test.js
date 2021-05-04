@@ -1,10 +1,12 @@
 const expect = require("chai").expect;
 import {URLs,babels} from "../../pajeobjects/anotherexpected";
 import otherTextBox from "../../pajeobjects/newtextbox";
-import {inputTextBoxPracticeForm} from "../../pajeobjects/input";
+//import {inputTextBoxPracticeForm} from "../../pajeobjects/input";    //this is hand write data
+import {inputTextBoxPracticeForm2} from "../../pajeobjects/input";
 describe("testPracticeForm", () => {
    it("testLabels of gender and clickBox", () => {
  browser.url(URLs.practiceForm);
+ 
  const selection = Math.round(Math.random()*2);
         otherTextBox.genderButtons[selection].click();
          expect(otherTextBox.textSuccess).to.eql(['Male', 'Female', 'Other']);
@@ -38,8 +40,18 @@ describe("testPracticeForm", () => {
   expect(otherTextBox.inputUserNumberPlaceholder).to.equal(babels.textBoxPlaceholders.userNumber);
   expect(otherTextBox.inputCurrentAddressPlaceholder1).to.equal(babels.textBoxPlaceholders.curentAddress);
 });
-it('Fill the form', () => {
- otherTextBox.fillForm(inputTextBoxPracticeForm);
+// it('Fill the form', () => {
+//  otherTextBox.fillForm(inputTextBoxPracticeForm);    // this is hand write data
 
+// });
+it('Fill the form using generate-random-data', () => {
+  //const myData = ininputTextBoxPracticeForm2();
+  otherTextBox.fillForm(inputTextBoxPracticeForm2);
+ // browser.pause(10000);
+
+  //console.log(myData.curentAddress1);
+
+  
+  
 });
 });
