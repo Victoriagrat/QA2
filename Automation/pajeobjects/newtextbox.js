@@ -113,8 +113,11 @@ get inputdateOfBirth(){
   this.inputEmails.setValue(inputTextBoxPracticeForm2.email);
   this.inputUserNumber.setValue(inputTextBoxPracticeForm2.userNumber);
   this.inputdateOfBirth.setValue(inputTextBoxPracticeForm2.dateOfBirth);
-  this.inputCurrentAddress1.setValue(inputTextBoxPracticeForm2.currentAddress);
+  this.inputCurrentAddress1.setValue(inputTextBoxPracticeForm2.currentAddress1);
 
+  }
+  get subjects1(){
+    return $('#subjects-label');
   }
 }
 

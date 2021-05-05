@@ -47,7 +47,11 @@ describe("testPracticeForm", () => {
 it('Fill the form using generate-random-data', () => {
   //const myData = ininputTextBoxPracticeForm2();
   otherTextBox.fillForm(inputTextBoxPracticeForm2);
- // browser.pause(10000);
+  otherTextBox.subjects1.click();
+  otherTextBox.inputCurrentAddress1.scrollIntoView()
+
+
+ browser.pause(10000);
 
   //console.log(myData.curentAddress1);
 

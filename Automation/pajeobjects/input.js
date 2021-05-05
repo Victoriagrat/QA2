@@ -20,8 +20,8 @@ export const inputTextBoxPracticeForm2 = {
     lastName :  random.lastName(),
     email:      random.email('gmail.com'),
     userNumber: random.mobile(),
-    dateOfBirth: ' ',
-    currentAddress: "17  Hadley Ln"
+    dateOfBirth: '',
+    currentAddress1: random.word(5, 10)
     
 }
 // function inputTextBoxPracticeForm3 () {   \\function for regeneration of new data every time
