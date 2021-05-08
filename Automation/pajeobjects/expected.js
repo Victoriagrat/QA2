@@ -8,7 +8,8 @@ export const URLs = {
     textBox: "https://demoqa.com/text-box",
     mainPage: "https://demoqa.com",
     checkbox: "https://demoqa.com/checkbox",
-    radioButton: "https://demoqa.com/radio-button"
+    radioButton: "https://demoqa.com/radio-button",
+    practiceForm: "https://demoqa.com/automation-practice-form"
 }
 
 export const labels = {
