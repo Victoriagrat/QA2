@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
-import {URLs, labels} from "../../expected";
-import TextBox from "../../textbox";
-import {inputTextBox} from "../../input";
+import {URLs, labels} from "../../pajeobjects/expected";
+import TextBox from "../../pajeobjects/textbox";
+import {inputTextBox} from "../../pajeobjects/input";
 describe('Validate Elements section', () => {
     it('Navigate to Elements page and check the header text', () => {
         browser.url(URLs.elements);
