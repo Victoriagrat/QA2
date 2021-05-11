@@ -1,5 +1,8 @@
 const expect = require("chai").expect;
 import {URLs,babels} from "../../pajeobjects/anotherexpected";
+//import {URLs} from "../../pajeobjects/anotherexpected";
+//import practiceForm from "../../pajeobjects/practiceForm";
+import PracticeForm from "../../pajeobjects/practiceForm";
 import otherTextBox from "../../pajeobjects/newtextbox";
 //import {inputTextBoxPracticeForm} from "../../pajeobjects/input";    //this is hand write data
 import {inputTextBoxPracticeForm2} from "../../pajeobjects/input";
@@ -44,14 +47,64 @@ describe("testPracticeForm", () => {
 //  otherTextBox.fillForm(inputTextBoxPracticeForm);    // this is hand write data
 
 // });
-it('Fill the form using generate-random-data', () => {
-  //const myData = ininputTextBoxPracticeForm2();
-  otherTextBox.fillForm(inputTextBoxPracticeForm2);
-  otherTextBox.subjects1.click();
-  otherTextBox.inputCurrentAddress1.scrollIntoView()
+// it('Fill the form using generate-random-data', () => {
+//   //const myData = ininputTextBoxPracticeForm2();
+//   otherTextBox.fillForm(inputTextBoxPracticeForm2);
+//   otherTextBox.subjects1.click();
+//   otherTextBox.inputCurrentAddress1.scrollIntoView()
 
 
- browser.pause(10000);
+ //browser.pause(10000);
+//});
+
+it('Make a selection and check states the name', () => {
+      browser.maximizeWindow();
+      //browser.url(URLs.practiceForm);
+      if (!PracticeForm.ddState.isDisplayedInViewport()) PracticeForm.ddState.scrollIntoView();
+      PracticeForm.ddState.click();
+      PracticeForm.ddStateList[0].waitForExist({ timeout: 10000 });
+      expect(PracticeForm.result).to.eql([ 'NCR', 'Uttar Pradesh', 'Haryana', 'Rajasthan' ]);
+  });
+  it('Get the list of cities per state new', () => {
+      browser.maximizeWindow();
+       browser.url(URLs.practiceForm);
+        PracticeForm.ddState.scrollIntoView();
+        PracticeForm.ddState.click();
+        PracticeForm.ddStateList[0].waitForExist({ timeout: 10000 });
+        PracticeForm.ddState1.click();
+        PracticeForm.ddCity.click();
+        PracticeForm.ddCityList[0].waitForExist({ timeout: 10000 });
+        PracticeForm.DDcity1.click();
+        PracticeForm.DDcity1.waitForExist({ timeout: 10000 });
+        let b = PracticeForm.DDcity1.getText();
+        // PracticeForm.ddCityList.map(el => el.getText());
+     expect(b).to.equal('Delhi');
+        PracticeForm.ddCity.click();
+        PracticeForm.ddCityList[0].waitForExist({ timeout: 10000 });
+        PracticeForm.DDcity2.click();
+        PracticeForm.DDcity2.waitForExist({ timeout: 10000 });
+        let c = PracticeForm.DDcity2.getText();
+     expect(c).to.equal('Gurgaon');
+    
+        PracticeForm.ddCity.click();
+        PracticeForm.ddCityList[0].waitForExist({ timeout: 10000 });
+        PracticeForm.DDcity3.click();
+        PracticeForm.DDcity3.waitForExist({ timeout: 10000 });
+        let d = PracticeForm.DDcity3.getText();
+     expect(d).to.equal('Noida');
+     PracticeForm.DDcity3.click();
+     
+    });
+     it('Fill the form using generate-random-data', () => {
+      //const myData = ininputTextBoxPracticeForm2();
+      otherTextBox.fillForm(inputTextBoxPracticeForm2);
+      otherTextBox.subjects1.click();
+      otherTextBox.inputCurrentAddress1.scrollIntoView()
+      
+      const selection = Math.round(Math.random()*2);
+        otherTextBox.genderButtons[selection].click();
+        PracticeForm.btnSubmit.click(); 
+     browser.pause(10000);
 
   //console.log(myData.curentAddress1);
 
