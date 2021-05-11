@@ -11,19 +11,31 @@ class PracticeForm {
   get ddCityList() {
     return $$("#city > div:nth-of-type(2) > div > div");
   }
+  get DDcity1(){
+    return $('div=Delhi');
+  }
+  get DDcity2(){
+    return $('div=Gurgaon');
+  }
+  get DDcity3(){
+    return $('div=Noida');
+  }
+  get DDcitylist1(){
+    return [this.DDcity1, this.DDcity2, this.DDcity3]
+  }
    get ddState1(){
-   return $$("#react-select-3-option-0");
+   return $("div=NCR");
    //
    //$("#react-select-3-option-0")[0].getText();
   }
   get ddState2(){
-    return $$("#react-select-3-option-1");
+    return $('div=Uttar Pradesh');
   }
    get ddState3(){
-    return $$("#react-select-3-option-2");
+    return $('div=Haryana');
    }
    get ddState4(){
-    return $$("#react-select-3-option-3");
+    return $("div=Rajastan");
   }
   get ddStatesList1(){
    return [this.ddState1, this.ddState2, this.ddState3,this.ddState4];
