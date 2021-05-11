@@ -24,6 +24,16 @@ export const inputTextBoxPracticeForm2 = {
     currentAddress1: random.word(5, 10)
     
 }
+
+    export function webTableData () {
+        return {
+            firstName : random.maleFirstName(),
+            lastName : random.lastName(),
+            userEmail: random.email('gmail.com'),
+            age: random.int(20,50),
+            salary : random.int(20000,500000),
+            department: random.word(10, 15)
+        }
 // function inputTextBoxPracticeForm3 () {   \\function for regeneration of new data every time
 //     return{
 //     firstName : random.maleFirstName(),
@@ -32,7 +42,4 @@ export const inputTextBoxPracticeForm2 = {
 //     userNumber: random.mobile(),
 //     dateOfBirth: ' ',
 //     currentAddress1:random.word(3, 10)
-//     }
-//}
-    
-
+    }
