@@ -41,6 +41,10 @@ class PracticeForm {
    return [this.ddState1, this.ddState2, this.ddState3,this.ddState4];
 
 }
+get btnSubmit(){
+  return $('#submit');
+}
+   
 get textSuccess(){
 return (this.ddStatesList1).map(el => el.getText());
 }

@@ -38,6 +38,9 @@ describe("Validate Practice Form", () => {
         PracticeForm.DDcity3.waitForExist({ timeout: 10000 });
         let d = PracticeForm.DDcity3.getText();
      expect(d).to.equal('Noida');
+     PracticeForm.DDcity3.click();
+     PracticeForm.btnSubmit.click(); 
+     browser.pause(10000);
 
        
         // PracticeForm.ddStateList[0].waitForExist({ timeout: 10000 });
