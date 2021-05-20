@@ -56,6 +56,13 @@ get inputDate(){
       return $('#dateOfBirthInput');
   
 }
+get thanksModal(){
+ return $('#example-modal-sizes-title-lg');
+}
+get thanksModalData(){
+  return $$('td').map(el => el.getText());
+}
+
 }
 
 export default new PracticeForm();

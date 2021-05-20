@@ -105,10 +105,16 @@ it('Make a selection and check states the name', () => {
         otherTextBox.genderButtons[selection].click();
         PracticeForm.btnSubmit.click(); 
      browser.pause(10000);
-
-  //console.log(myData.curentAddress1);
-
-  
-  
-});
+     try{
+        PracticeForm.thanksModal.waitForExist(10)
+      
+     }
+     catch(err){
+        console.log(err.message);
+     }
+     expect(PracticeForm.thanksModal.isExisting()).to.be.true;
+     const a = PracticeForm.thanksModalData[1];
+     console.log(a);
+    expect(a).to.be.eql(otherTextBox.inputCurrentAddress1.firstName);
+   })
 });
