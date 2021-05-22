@@ -60,8 +60,10 @@ get thanksModal(){
  return $('#example-modal-sizes-title-lg');
 }
 get thanksModalData(){
-  return $$('td').map(el => el.getText());
+  return $$('td').map(el => el.getText()).map(el => el.split(' '));
 }
+
+
 
 }
 

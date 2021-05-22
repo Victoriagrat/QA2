@@ -6,6 +6,7 @@ import PracticeForm from "../../pajeobjects/practiceForm";
 import otherTextBox from "../../pajeobjects/newtextbox";
 //import {inputTextBoxPracticeForm} from "../../pajeobjects/input";    //this is hand write data
 import {inputTextBoxPracticeForm2} from "../../pajeobjects/input";
+import {inputTextBoxPracticeForm} from "../../pajeobjects/input";
 describe("testPracticeForm", () => {
    it("testLabels of gender and clickBox", () => {
  browser.url(URLs.practiceForm);
@@ -57,7 +58,7 @@ describe("testPracticeForm", () => {
  //browser.pause(10000);
 //});
 
-it('Make a selection and check states the name', () => {
+it('Make a selection and check states name', () => {
       browser.maximizeWindow();
       //browser.url(URLs.practiceForm);
       if (!PracticeForm.ddState.isDisplayedInViewport()) PracticeForm.ddState.scrollIntoView();
@@ -100,11 +101,17 @@ it('Make a selection and check states the name', () => {
       otherTextBox.fillForm(inputTextBoxPracticeForm2);
       otherTextBox.subjects1.click();
       otherTextBox.inputCurrentAddress1.scrollIntoView()
-      
+      otherTextBox.inputdateOfBirth.click();
+      browser.keys(['Control', 'a']);
+      browser.keys('Space');
+      PracticeForm.inputDate.setValue("03 Apr 2021");
+      browser.keys("Enter");
+      browser.pause(5000);
       const selection = Math.round(Math.random()*2);
         otherTextBox.genderButtons[selection].click();
         PracticeForm.btnSubmit.click(); 
      browser.pause(10000);
+   
      try{
         PracticeForm.thanksModal.waitForExist(10)
       
@@ -113,8 +120,28 @@ it('Make a selection and check states the name', () => {
         console.log(err.message);
      }
      expect(PracticeForm.thanksModal.isExisting()).to.be.true;
-     const a = PracticeForm.thanksModalData[1];
-     console.log(a);
-    expect(a).to.be.eql(otherTextBox.inputCurrentAddress1.firstName);
-   })
+     const a = PracticeForm.thanksModalData[7][0];
+   let g = +a;
+     console.log(g);
+     const b = inputTextBoxPracticeForm2;
+
+     
+    // let c = Object.keys(b);
+     let d = Object.values(b);
+    
+  
+     console.log((d)[3]);
+    expect(PracticeForm.thanksModalData[1][0]).to.be.eql((d)[0]);
+    expect(PracticeForm.thanksModalData[1][1]).to.be.eql((d)[1]);
+    expect(PracticeForm.thanksModalData[3][0]).to.be.eql((d)[2]);
+    expect(g).to.be.eql((d)[3]);
+    expect(PracticeForm.thanksModalData[17][0]).to.be.eql((d)[5]);
+    expect(PracticeForm.thanksModalData[9][0]).to.be.eql("03");
+    expect(PracticeForm.thanksModalData[9][1]).to.be.eql("April,2021");
+    expect(otherTextBox.genderButtons[selection].getText()).to.be.eql(PracticeForm.thanksModalData[5][0]);// create array of object and compare arrays
+    expect(PracticeForm.thanksModalData[1][0]).to.be.eql(inputTextBoxPracticeForm2.firstName);// compare array to class object
+
+
+
+   });
 });

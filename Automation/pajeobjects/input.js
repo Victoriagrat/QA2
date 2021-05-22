@@ -10,6 +10,7 @@ export const inputTextBoxPracticeForm = {
     firstName : "Vika",
     lastName : "Grat",
     email: "vicabellaru@gmail.com",
+   // dateofbirth: '20 May 2021',
     userNumber: "6176399204",
     currentAddress: "17  Hadley Ln"
     
@@ -19,8 +20,8 @@ export const inputTextBoxPracticeForm2 = {
     firstName : random.maleFirstName(),
     lastName :  random.lastName(),
     email:      random.email('gmail.com'),
-    userNumber: random.mobile(),
-    dateOfBirth: '',
+    userNumber: random.int(1000000000,9990000000),
+    dateOfBirth: "03 Apr 2021",
     currentAddress1: random.word(5, 10)
     
 }
